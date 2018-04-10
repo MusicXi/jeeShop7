@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.front.entity;import java.io.Serializable;/** * 属性产品中间类 */public class AttributeLink extends com.zlkj.ssm.shop.entity.common.AttributeLink implements Serializable {	private static final long serialVersionUID = 1L;}

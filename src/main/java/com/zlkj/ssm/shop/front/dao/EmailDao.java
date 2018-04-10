@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.front.dao;import com.zlkj.ssm.shop.core.DaoManager;import com.zlkj.ssm.shop.front.entity.Email;public interface EmailDao extends DaoManager<Email> {	void updateEmailInvalidWhenReg(Email email);}

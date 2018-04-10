@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.manage.dao;import java.util.List;import com.zlkj.ssm.shop.core.DaoManager;import com.zlkj.ssm.shop.manage.entity.Orderdetail;import com.zlkj.ssm.shop.manage.entity.ReportInfo;public interface AdminOrderdetailDao extends DaoManager<Orderdetail> {	List<ReportInfo> reportProductSales(Orderdetail orderdetail);}

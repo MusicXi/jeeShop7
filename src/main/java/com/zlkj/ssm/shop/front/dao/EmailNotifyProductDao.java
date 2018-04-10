@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.front.dao;import com.zlkj.ssm.shop.core.DaoManager;import com.zlkj.ssm.shop.front.entity.EmailNotifyProduct;public interface EmailNotifyProductDao extends DaoManager<EmailNotifyProduct> {	int selectCount(EmailNotifyProduct ep);}

@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.front.entity;import java.io.Serializable;public class Ordership extends com.zlkj.ssm.shop.entity.common.Ordership implements		Serializable {	private static final long serialVersionUID = 1L;	public Ordership() {		super();	}	public Ordership(String orderid) {		super(orderid);	}	public void clear() {		super.clear();	}}

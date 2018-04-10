@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.front.service;import com.zlkj.ssm.shop.core.Services;import com.zlkj.ssm.shop.front.entity.QuestionnaireResult;public interface QuestionnaireResultService extends		Services<QuestionnaireResult> {}

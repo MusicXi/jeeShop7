@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.manage.dao;import com.zlkj.ssm.shop.core.DaoManager;import com.zlkj.ssm.shop.manage.entity.CommentType;public interface AdminCommentTypeDao extends DaoManager<CommentType> {	/**	 * 更新所有的评论插件为未选中	 */	void updateAllN();}

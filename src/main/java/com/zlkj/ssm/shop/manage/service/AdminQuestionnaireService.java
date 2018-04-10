@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.manage.service;import com.zlkj.ssm.shop.core.Services;import com.zlkj.ssm.shop.manage.entity.Questionnaire;public interface AdminQuestionnaireService extends Services<Questionnaire> {	/**	 * 批量修改问卷状态	 * @param ids	 * @param questionnaireStatusY	 */	void changeStatus(String[] ids, String questionnaireStatusY);}

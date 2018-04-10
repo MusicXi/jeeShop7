@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.front.dao;import com.zlkj.ssm.shop.core.DaoManager;import com.zlkj.ssm.shop.front.entity.Systemlog;public interface SystemlogDao extends DaoManager<Systemlog> {}

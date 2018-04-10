@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.manage.entity;import java.io.Serializable;public class Orderpay extends com.zlkj.ssm.shop.entity.common.Orderpay implements Serializable {	private static final long serialVersionUID = 1L;	public static final String orderpay_paymethod_alipayescow = "alipayescow";//支付宝纯担保交易接口	public void clear() {		super.clear();	}}

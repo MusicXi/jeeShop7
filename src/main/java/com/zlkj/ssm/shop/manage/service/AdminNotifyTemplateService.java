@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.manage.service;import com.zlkj.ssm.shop.core.Services;import com.zlkj.ssm.shop.manage.entity.NotifyTemplate;public interface AdminNotifyTemplateService extends Services<NotifyTemplate> {}

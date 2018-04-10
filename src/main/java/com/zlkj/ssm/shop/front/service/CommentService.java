@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.front.service;import java.util.List;import com.zlkj.ssm.shop.core.Services;import com.zlkj.ssm.shop.front.entity.Comment;public interface CommentService extends Services<Comment> {	/**	 * 用户评价商品，评价成功后将该订单项设置为已评价	 * @param e	 * @return	 */	public int insertList(List<Comment> comments);}

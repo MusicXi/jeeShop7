@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.manage.dao;import com.zlkj.ssm.shop.core.DaoManager;import com.zlkj.ssm.shop.manage.entity.Attribute;public interface AdminAttributeDao extends DaoManager<Attribute> {	/**	 * @param e	 */	void deleteByPid(int pid);	/**	 * @param id	 */	void deleteAllById(int id);	int selectCount(Attribute ee);}

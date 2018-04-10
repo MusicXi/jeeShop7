@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.front.dao;import java.util.List;import com.zlkj.ssm.shop.core.DaoManager;import com.zlkj.ssm.shop.front.entity.Order;import com.zlkj.ssm.shop.front.entity.OrderSimpleReport;public interface OrderDao extends DaoManager<Order> {	List<Order> selectOrderInfo(Order order);	OrderSimpleReport selectOrdersSimpleReport(String account);}

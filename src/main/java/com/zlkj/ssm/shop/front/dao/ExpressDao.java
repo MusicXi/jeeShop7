@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.front.dao;import com.zlkj.ssm.shop.core.DaoManager;import com.zlkj.ssm.shop.front.entity.Express;public interface ExpressDao extends DaoManager<Express> {}

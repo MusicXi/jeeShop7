@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.front.entity;import java.io.Serializable;public class Pay extends com.zlkj.ssm.shop.entity.common.Pay implements Serializable {	private static final long serialVersionUID = 1L;	public void clear() {		super.clear();	}}

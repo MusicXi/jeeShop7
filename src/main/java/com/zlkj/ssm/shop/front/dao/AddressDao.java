@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.front.dao;import com.zlkj.ssm.shop.core.DaoManager;import com.zlkj.ssm.shop.front.entity.Address;public interface AddressDao extends DaoManager<Address> {	/**	 * 初始化所有的地址全部为不选择	 */	void initAllAddress(Address address);}

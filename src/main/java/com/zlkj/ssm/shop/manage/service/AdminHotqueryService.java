@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.manage.service;import com.zlkj.ssm.shop.core.Services;import com.zlkj.ssm.shop.manage.entity.Hotquery;public interface AdminHotqueryService extends Services<Hotquery> {}

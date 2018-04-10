@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.manage.service;import com.zlkj.ssm.shop.core.Services;import com.zlkj.ssm.shop.manage.entity.Systemlog;public interface AdminSystemlogService extends Services<Systemlog> {		/**	 * 根据账号查询最新的一次登陆记录	 * @return	 */	Systemlog selectFirstOne(String account);}

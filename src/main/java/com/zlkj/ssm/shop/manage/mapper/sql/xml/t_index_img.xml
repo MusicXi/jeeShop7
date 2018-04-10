@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zlkj.ssm.shop.manage.dao.AdminIndexImgDao">
+	<select id="selectPageList" parameterType="com.zlkj.ssm.shop.manage.entity.IndexImg" resultType="hashMap">
+		SELECT * 
+		FROM t_index_img t
+		where 1=1
+		  order by order1  
+		limit #{offset},#{pageSize}
+	</select>
+	<select id="selectPageCount" parameterType="com.zlkj.ssm.shop.manage.entity.IndexImg" resultType="java.lang.Integer">
+		select count(*) from (
+		SELECT * 
+		FROM t_index_img t
+		where 1=1
+		) a
+	</select>
+	
+	<select id="selectOne" parameterType="com.zlkj.ssm.shop.manage.entity.IndexImg" resultType="com.zlkj.ssm.shop.manage.entity.IndexImg">
+		SELECT * 
+		FROM t_index_img t
+		<where>
+			1=1
+			<if test="id!=null">
+				and t.id=#{id}
+			</if>
+		</where>
+	</select>
+	
+	<insert id="insert" parameterType="com.zlkj.ssm.shop.manage.entity.IndexImg" useGeneratedKeys="true" 
+		keyProperty="id">
+		insert into t_index_img (id,title,picture,order1,desc1,link)
+		 values (id,#{title},#{picture},#{order1},#{desc1},#{link})
+	</insert>
+	
+	<update id="update" parameterType="com.zlkj.ssm.shop.manage.entity.IndexImg">
+		update t_index_img set id=#{id},title=#{title},order1=#{order1},desc1=#{desc1},link=#{link}
+		<if test="picture!=null and picture!=''">,picture=#{picture}</if>
+		where id=#{id}
+	</update>
+	
+	<delete id="delete" parameterType="com.zlkj.ssm.shop.manage.entity.IndexImg">
+		delete from t_index_img where id=#{id}
+	</delete>
+	
+	<delete id="deleteById" parameterType="int">
+		delete from t_index_img
+		where id=#{id}
+	</delete>
+	
+	<select id="getImgsShowToIndex" parameterType="int" resultType="com.zlkj.ssm.shop.manage.entity.IndexImg">
+		SELECT * 
+		FROM t_index_img t order by order1
+	</select>
+</mapper>  

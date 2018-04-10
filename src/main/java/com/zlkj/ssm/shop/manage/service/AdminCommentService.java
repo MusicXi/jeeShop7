@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.manage.service;import com.zlkj.ssm.shop.core.Services;import com.zlkj.ssm.shop.manage.entity.Comment;public interface AdminCommentService extends Services<Comment> {	/**	 * 批量修改评论状态	 * @param ids	 */	void updateStatus(String[] ids,String status);	/**	 * 查询尚未恢复的评论数	 * @return	 */	int selectNotReplyCount();}

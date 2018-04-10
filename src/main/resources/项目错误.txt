@@ -1,0 +1,60 @@
+加入 spring-boot-maven-plugin插件：
+		打包时提示错误:
+		Caused by: org.apache.maven.plugin.PluginExecutionException: 
+		Execution default of goal org.springframework.boot:spring-boot-maven-plugin:1.5.4.RELEASE:repackage 
+			failed: Unable to find a single main class from the following candidates 
+			[   
+				com.zlkj.ssm.shop.component.FreemarkerDirectiveComponent, com.zlkj.ssm.shop.core.kuaidi100, 
+				com.zlkj.ssm.shop.core.kuaidi100Helper, com.zlkj.ssm.shop.sms.SMSWebChinese, com.zlkj.ssm.shop.task.SitemapTask, 
+				com.zlkj.ssm.shop.common.tools.AddressUtils, com.zlkj.ssm.shop.common.tools.Baidu, 
+				com.zlkj.ssm.shop.common.tools.CreateAreaUtil, com.zlkj.ssm.shop.common.tools.DateTimeUtil,
+			 	com.zlkj.ssm.shop.common.tools.DruidDecrypt, com.zlkj.ssm.shop.common.tools.HttpUtil, 
+			 	com.zlkj.ssm.shop.common.tools.ImageUtil, com.zlkj.ssm.shop.common.tools.ImageUtils, 
+			 	com.zlkj.ssm.shop.common.tools.LRULinkedHashMap, com.zlkj.ssm.shop.common.tools.MD5,
+			  	com.zlkj.ssm.shop.common.tools.MailUtil, com.zlkj.ssm.shop.common.tools.MapUtil,
+			    com.zlkj.ssm.shop.common.tools.PinYinUtil, com.zlkj.ssm.shop.common.tools.Tomcat0, 
+			    com.zlkj.ssm.shop.core.cache.FrontCache, com.zlkj.ssm.shop.core.cache.ManageCache, 
+			    com.zlkj.ssm.shop.core.config.ApplicationConfig, com.zlkj.ssm.shop.core.oss.OSSObjectSample, 
+			    com.zlkj.ssm.shop.front.service.impl.AccountServiceImpl, com.zlkj.ssm.shop.web.controller.manage.OssController,
+			    com.zlkj.ssm.shop.web.controller.manage.SystemSettingController
+			 ]
+	错误原因：原来这个错误是因为maven在执行打包的时候会查找项目中的main方法，并设置为Spring boot 生成jar包的启动入口，但此时有多个main方法，maven插件就无所适从了。因此出现此异常。
+	
+	解决方案一、：
+		 除了 @SpringBootApplication注释的类用main方法 其他所有的类中严谨使用main方法  用完必须屏蔽掉
+    解决方案二 
+    <properties>
+    	<springboot.start-class>com.zlkj.ssm.shop.core.config.ApplicationConfig</springboot.start-class>
+    </properties>
+    
+     <plugin>
+      	<groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-maven-plugin</artifactId>
+	    <configuration>
+	    <!-- 如何没有该项 fork:true配置 即 spring-boot-devtools不起作用-->
+	    <fork>true</fork>
+       <!-- 加入这个插件 所有的类中严谨使用main方法  用完必须屏蔽掉 -->
+	     <maimClass>${springboot.start-class}</maimClass>
+	    </configuration>
+      </plugin>
+      
+      
+      
+Spring boot热部署 异常：
+<dependency>
+<groupId>org.springframework.boot</groupId>
+<artifactId>spring-boot-devtools</artifactId>
+</dependency>    
+
+添加这个依赖后 启动项目完成后走一下这个方法并抛出SilentExitException 不过并不影响项目功能
+解决方案：
+1】可以参考：https://stackoverflow.com/questions/32770884/breakpoint-at-throw-new-silentexitexception-in-eclipse-spring-boot
+  详细步骤：Eclipse -> Preferences ->Java ->Debug
+去掉"Suspend execution on uncaught exceptions"前面的勾；
+
+      
+      
+	public static void exitCurrentThread() {
+		throw new SilentExitException();
+	}
+      

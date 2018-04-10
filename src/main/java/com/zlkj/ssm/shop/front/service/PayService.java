@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.front.service;import com.zlkj.ssm.shop.core.Services;import com.zlkj.ssm.shop.front.entity.Pay;public interface PayService extends Services<Pay> {}

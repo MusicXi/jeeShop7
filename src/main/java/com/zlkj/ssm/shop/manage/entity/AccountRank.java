@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.manage.entity;import java.io.Serializable;public class AccountRank extends com.zlkj.ssm.shop.entity.common.AccountRank implements Serializable {	private static final long serialVersionUID = 1L;	public void clear() {		super.clear();	}}

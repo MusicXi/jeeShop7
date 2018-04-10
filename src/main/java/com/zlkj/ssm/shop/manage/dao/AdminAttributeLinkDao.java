@@ -1,0 +1,1 @@
+package com.zlkj.ssm.shop.manage.dao;import com.zlkj.ssm.shop.core.DaoManager;import com.zlkj.ssm.shop.manage.entity.AttributeLink;public interface AdminAttributeLinkDao extends DaoManager<AttributeLink> {	/**	 * @param e	 * @return	 */	int deleteByCondition(AttributeLink e);	/**	 * 根据属性ID删除属性关联表的数据	 * @param id	 */	void deleteByAttributeId(int id);}
