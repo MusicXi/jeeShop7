@@ -1,7 +1,9 @@
 /bin/
 /target/
+/logs/
 .classpath
 .project
 .settings
 .idea
+
 
