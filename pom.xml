@@ -16,8 +16,8 @@
 
     <properties>
         <!-- 指定Jdk版本以及源码版本 -->
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <!-- Spring Boot 启动入口 -->
         <springboot.start-class>com.zlkj.ssm.shop.core.config.ApplicationConfiguration</springboot.start-class>
         <!-- 指定系统模块版本 -->
