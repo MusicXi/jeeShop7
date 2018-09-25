@@ -32,7 +32,7 @@
 		<title>支付宝纯担保交易接口</title>
 	</head>
 	<%
-	/*Logger logger = LoggerFactory.getLogger(AlipayNotify.class);
+	Logger logger = LoggerFactory.getLogger(AlipayNotify.class);
 		////////////////////////////////////请求参数//////////////////////////////////////
 		PayInfo payInfo = (PayInfo)request.getAttribute("payInfo");
 		//支付类型
@@ -103,10 +103,10 @@
 		//收货人手机号码
 		String receive_mobile = payInfo.getWIDreceive_mobile();//new String(payInfo.getWIDreceive_mobile().getBytes("ISO-8859-1"),"UTF-8");
 		//如：13312341234
-
-
+		
+		
 		//////////////////////////////////////////////////////////////////////////////////
-
+		
 		//把请求参数打包成数组
 		Map<String, String> sParaTemp = new HashMap<String, String>();
 		sParaTemp.put("service", "create_partner_trade_by_buyer");
@@ -130,7 +130,7 @@
 		sParaTemp.put("receive_zip", receive_zip);
 		sParaTemp.put("receive_phone", receive_phone);
 		sParaTemp.put("receive_mobile", receive_mobile);
-
+		
 		//建立请求
 		//out.println("请求支付宝...");
 		try{
@@ -142,7 +142,7 @@
 			e.printStackTrace();
 			System.out.println("异常！");
 			out.println("异常！");
-		}*/
+		}
 	%>
 	<body>
 	</body>

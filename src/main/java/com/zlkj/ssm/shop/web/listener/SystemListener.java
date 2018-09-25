@@ -13,8 +13,10 @@ import com.zlkj.ssm.shop.core.cache.ManageCache;
 @WebListener
 public class SystemListener implements ServletContextListener {
 	private static final org.slf4j.Logger logger = LoggerFactory.getLogger(SystemListener.class);
+	@Override
 	public void contextDestroyed(ServletContextEvent arg0) {
 	}
+	@Override
 	public void contextInitialized(ServletContextEvent arg0) {
 		try {
 			WebApplicationContext app = WebApplicationContextUtils.getWebApplicationContext(arg0.getServletContext());

@@ -1,4 +1,6 @@
 package com.zlkj.ssm.shop.web.controller.front;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +22,7 @@ import java.util.List;
 /**
  * 文章管理
  */
+@Api(value = "frontNewsAction", tags = "文章管理")
 @Controller("frontNewsAction")
 public class NewsAction extends FrontBaseController<News> {
 	private static final long serialVersionUID = 1L;
@@ -49,15 +52,14 @@ public class NewsAction extends FrontBaseController<News> {
 	 * 获取新闻详情
 	 * @return
 	 */
+	@ApiOperation(value="获取新闻详情", notes="获取新闻详情。。。")
 	@RequestMapping("/news/{id}")
 	public String newsInfo(@PathVariable("id")String id, ModelMap model) throws Exception{
 		logger.error("NewsAction.newsInfo=== id="+id);
 		if(StringUtils.isBlank(id)){
 			throw new NullPointerException("id is null");
 		}
-		
-//		e = newsService.selectById(id);
-		
+
 		News news =newsService.selectById(id);
 		if(news==null){
 			throw new NullPointerException();

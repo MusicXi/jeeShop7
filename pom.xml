@@ -43,6 +43,7 @@
         <commons-httpclient.version>3.0.1</commons-httpclient.version>
         <!-- 统一项目、源码 编码 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <springfox-swagger2.version>2.7.0</springfox-swagger2.version>
     </properties>
 
     <dependencies>
@@ -354,6 +355,22 @@
             <groupId>org.tuckey</groupId>
             <artifactId>urlrewritefilter</artifactId>
             <version>4.0.4</version>
+        </dependency>
+
+        <!-- swagger2 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox-swagger2.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- swagger2 UI -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox-swagger2.version}</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
